@@ -1,0 +1,54 @@
+<div class="container">
+
+  <h2>Intern List</h2>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+
+    <!-- SEARCH -->
+    <input [(ngModel)]="searchText" placeholder="Search by name">
+    <button (click)="search()">Search</button>
+
+    <!-- FILTER BY BATCH -->
+    <input type="number"
+           [(ngModel)]="selectedBatch"
+           (ngModelChange)="filterByBatch()"
+           placeholder="Batch ID">
+
+    <!-- FILTER BY TYPE -->
+    <select [(ngModel)]="selectedType"
+            (ngModelChange)="filterByType()">
+      <option value="">Select Type</option>
+      <option value="Free">Free</option>
+      <option value="Premium">Premium</option>
+    </select>
+
+    <!-- RESET -->
+    <button (click)="loadAll()">Show All</button>
+
+  </div>
+
+  <!-- TABLE -->
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Batch</th>
+      <th>Type</th>
+      <th>Date Of Joining</th>
+    </tr>
+
+    <tr *ngFor="let i of interns">
+      <td>{{i.internId}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.email}}</td>
+      <td>{{i.mobile}}</td>
+      <td>{{i.batch?.id}}</td>
+      <td>{{i.idCardType}}</td>
+      <td>{{i.dateOfJoining}}</td>
+    </tr>
+  </table>
+
+</div>

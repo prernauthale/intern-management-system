@@ -1,0 +1,27 @@
+<h2>Add Intern</h2>
+
+<form (ngSubmit)="submitForm()">
+
+  <input [(ngModel)]="intern.name" name="name" placeholder="Name" required><br><br>
+
+  <input [(ngModel)]="intern.email" name="email" placeholder="Email" required><br><br>
+
+  <input [(ngModel)]="intern.mobile" name="mobile" placeholder="Mobile" required><br><br>
+
+  <select [(ngModel)]="intern.idCardType" name="idCardType">
+    <option value="Free">Free</option>
+    <option value="Premium">Premium</option>
+  </select><br><br>
+
+  <input type="date" [(ngModel)]="intern.dateOfJoining" name="dateOfJoining"><br><br>
+
+  <select [(ngModel)]="intern.batchId" name="batchId">
+    <option value="">Select Batch</option>
+    <option *ngFor="let b of batches" [value]="b.id">
+      Batch {{b.id}} ({{b.startDate}})
+    </option>
+  </select><br><br>
+
+  <button type="submit">Add Intern</button>
+
+</form>

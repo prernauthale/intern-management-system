@@ -1,0 +1,96 @@
+/* GLOBAL */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to right, #eef2f7, #f8fbff);
+  margin: 0;
+  padding: 20px;
+}
+
+/* HEADINGS */
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* CONTAINER LOOK */
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* INPUT + SELECT */
+input, select {
+  padding: 10px;
+  margin: 8px 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52,152,219,0.4);
+}
+
+/* BUTTON */
+button {
+  padding: 9px 14px;
+  margin: 5px;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(to right, #2980b9, #1f5f8a);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* TABLE HEADER */
+th {
+  background: linear-gradient(to right, #2c3e50, #34495e);
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+/* TABLE DATA */
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* ROW HOVER */
+tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* ZEBRA STRIPES */
+tr:nth-child(even) {
+  background-color: #f9fbfd;
+}
+
+/* BUTTON GROUP SPACING */
+.controls {
+  text-align: center;
+  margin-bottom: 15px;
+}

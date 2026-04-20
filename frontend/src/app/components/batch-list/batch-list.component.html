@@ -1,0 +1,31 @@
+<div class="container">
+
+  <h2>Batch List</h2>
+
+  <table>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Total Interns</th>
+    </tr>
+
+    <tr *ngFor="let b of batches">
+      <td>{{b.startDate}}</td>
+      <td>{{b.endDate}}</td>
+      <td>{{b.interns?.length}}</td>
+    </tr>
+  </table>
+
+  <h3>Intern Details</h3>
+
+  <div *ngFor="let b of batches">
+    <h4>Batch {{b.id}}</h4>
+
+    <ul>
+      <li *ngFor="let i of b.interns">
+        {{i.name}} - {{i.idCardType}}
+      </li>
+    </ul>
+  </div>
+
+</div>
